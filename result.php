@@ -15,6 +15,7 @@ $options = array(
 // ストリームコンテキスト生成
 $context = stream_context_create($options);
 // POST送信
-$result = file_get_contents(‘https://ratezou-sample.herokuapp.com/api.php’, false, $context);
+// $result = file_get_contents(‘https://ratezou-sample.herokuapp.com/api.php’, false, $context);
+$result = "test";
 // レスポンス表示
 echo $result;
