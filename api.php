@@ -1,6 +1,5 @@
 <?php
 
-echo "this is api.php\n";
 $json = json_decode(file_get_contents('php://input'), true);
 $key1 = $json['key1'];
 $key2 = $json['key2'];
@@ -48,6 +47,5 @@ try{
 function result($result_code, $result_message) {
   header("Content-Type: application/json; charset=UTF-8");
   $result = array('result' => $result_code, 'message' => $result_message);
-  echo json_encode($result);
-  exit;
+  return json_encode($result);
 }
