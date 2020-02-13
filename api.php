@@ -45,7 +45,7 @@ try{
 
 
 function result($result_code, $result_message) {
-  header("Content-Type: application/json; charset=UTF-8");
+  header("Access-Control-Allow-Origin: *");
   $result = array('result' => $result_code, 'message' => $result_message);
-  return json_encode($result);
+  echo json_encode($result);
 }
