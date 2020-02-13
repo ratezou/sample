@@ -21,6 +21,16 @@ if ($row['cnt'] == 1) {
   result(0, 'already registered');
 }
 
+//DBに登録がなく、key1の登録件数が2件以上のときはエラー
+$stmt = $pdo->prepare("select count(*) cnt from test where key1 = :key1");
+$stmt->execute([
+':key1' => $key1
+]);
+$row = $stmt->fetch();
+if ($row['cnt'] >= 2) {
+  result(9, 'already exists');
+}
+
 function result($result_code, $result_message) {
   header("Content-Type: application/json; charset=UTF-8");
   $result = array('result' => $result_code, 'message' => $result_message);
@@ -30,15 +40,7 @@ function result($result_code, $result_message) {
 
 
 /*
-//DBに登録がなく、key1の登録件数が2件以上のときはエラー
-$stmt = $db->prepare("select count(*) cnt from test where key1 = :key1");
-$stmt->execute([
-':key1' => $key1
-]);
-$row = $stmt->fetch();
-if ($row['cnt'] >= 2) {
-  result(9, 'already exists');
-}
+
 
 //DBに登録がなく、key1の登録件数が2件未満のときは、DBに登録してチェックOKとする
 $sql = "insert into test(key1, key2) values(:key1, :key2)";
