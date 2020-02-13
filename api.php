@@ -48,4 +48,5 @@ function result($result_code, $result_message) {
   header("Access-Control-Allow-Origin: *");
   $result = array('result' => $result_code, 'message' => $result_message);
   echo json_encode($result);
+  exit;
 }
