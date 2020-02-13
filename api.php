@@ -11,7 +11,7 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
 //DBに登録があればチェックOK
-$stmt = $db->prepare("select count(*) cnt from test where key1 = :key1 and key2 = :key2");
+$stmt = $pdo->prepare("select count(*) cnt from test where key1 = :key1 and key2 = :key2");
 $stmt->execute([
   ':key1' => $key1,
   ':key2' => $key2
