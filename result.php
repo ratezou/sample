@@ -1,6 +1,7 @@
 <?php
 $data = array(
-  "key1" => "value1"
+  "key1" => "value1",
+  "key2" => "value2"
 );
 // JSON形式に変換
 $data = json_encode($data);
