@@ -1,4 +1,5 @@
 <?php
 
+  echo "this is api.php";
   $json = json_decode(file_get_contents('php://input'), true);
-  print $json['key1'];
+  echo $json['key1'];
