@@ -13,8 +13,8 @@
             var url = $("#url_post").val();
 
                 var JSONdata = {
-                    value1: $("#value1").val(),
-                    value2: $("#value2").val()
+                    key1: $("#key1").val(),
+                    key2: $("#key2").val()
                 };
 
             alert(JSON.stringify(JSONdata));
@@ -48,9 +48,9 @@
 </head>
 <body>
     <h1>HTMLファイルからPOSTでJSONデータを送信する</h1>
-    <p>URL: <input type="text" id="url_post" name="url" size="100" value="http://testurl/"></p>
-    <p>value1: <input type="text" id="value1" size="30" value="値1"></p>
-    <p>value2: <input type="text" id="value2" size="30" value="値2"></p>
+    <p>URL: <input type="text" id="url_post" name="url" size="100" value="https://ratezou-sample.herokuapp.com/api.php"></p>
+    <p>key1: <input type="text" id="key1" size="30" value="値1"></p>
+    <p>key2: <input type="text" id="key2" size="30" value="値2"></p>
     <p><button id="button" type="button">submit</button></p>
     <textarea id="response" cols=120 rows=10 disabled></textarea>
 </body>
