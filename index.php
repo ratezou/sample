@@ -23,7 +23,7 @@
                 type : 'post',
                 url : url,
                 data : JSON.stringify(JSONdata),
-                contentType: 'application/JSON',
+                contentType: 'application/json',
                 dataType : 'JSON',
                 scriptCharset: 'utf-8',
                 success : function(data) {
@@ -39,10 +39,6 @@
                     alert("error");
                     alert(JSON.stringify(data));
                     $("#response").html(JSON.stringify(data));
-
-                    console.log("XMLHttpRequest : " + XMLHttpRequest.status);
-                　　console.log("textStatus     : " + textStatus);
-                　　console.log("errorThrown    : " + errorThrown.message);
 
                 }
             });
