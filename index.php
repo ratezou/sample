@@ -49,8 +49,8 @@
 <body>
     <h1>HTMLファイルからPOSTでJSONデータを送信する</h1>
     <p>URL: <input type="text" id="url_post" name="url" size="100" value="https://ratezou-sample.herokuapp.com/api.php"></p>
-    <p>key1: <input type="text" id="key1" size="30" value="値1"></p>
-    <p>key2: <input type="text" id="key2" size="30" value="値2"></p>
+    <p>key1: <input type="text" id="key1" size="30" value="1"></p>
+    <p>key2: <input type="text" id="key2" size="30" value="2"></p>
     <p><button id="button" type="button">submit</button></p>
     <textarea id="response" cols=120 rows=10 disabled></textarea>
 </body>
