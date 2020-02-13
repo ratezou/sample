@@ -39,6 +39,11 @@
                     alert("error");
                     alert(JSON.stringify(data));
                     $("#response").html(JSON.stringify(data));
+
+                    console.log("XMLHttpRequest : " + XMLHttpRequest.status);
+                　　console.log("textStatus     : " + textStatus);
+                　　console.log("errorThrown    : " + errorThrown.message);
+
                 }
             });
         })
