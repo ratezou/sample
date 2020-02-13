@@ -24,8 +24,8 @@
                 url : url,
                 data : JSON.stringify(JSONdata),
                 contentType: 'application/json',
-                dataType : 'JSON',
-                scriptCharset: 'utf-8',
+                // dataType : 'JSON',
+                // scriptCharset: 'utf-8',
                 success : function(data) {
 
                     // Success
